@@ -13,9 +13,11 @@
     <main>
  <header>
         <img src="img/logo-culturama.png" alt="logo-culturama">
-        <h1>Pesquisa Online</h1>
+        <h1>Pesquisa de Opinião</h1>
     </header>
+
     <section>
+        <form action="sucesso.html" method="get">
         <form action=" " method="get">
             <fieldset>
                 <legend> Dados Pessoais</legend>
@@ -36,11 +38,14 @@
                 <br>
 
                 <label for="phone">Telefone:</label>
-                <input id= "phone" type="tel" name="userPhone" pattern="[0-9]{11}" placeholder="(DD) + número">
+                <input id= "phone" type="tel" name="userPhone" pattern="[0-9]{11}" placeholder="(DD) + número" aria-describedby="phoneHelp">
+                <small id="phoneHelp">Preencha com 11 digítos no formato: DDD + número sem espaços ou hífen.</small>
                 <br>
 
                 <label for="Image">Foto:</label>
-                <input id="Image"type="file" accept="image/*" name="userImage">
+                <input id="Image"type="file" accept="image/*" name="userImage"
+                aria-describedby="imagineHelp">
+                <small id="imagineHelp">Envie uma foto no formato PNG ou JPG.</small>
                 <br>    
             </fieldset> 
 
@@ -166,11 +171,13 @@
 
             </fieldset>
 
-            <button type="submit">Enviar</button> 
-            <button type="reset">Limpar</button> 
+            <button type="submit" aria-label="Enviar dados do formulário">Enviar</button> 
+            <button type="reset" aria-label="Limpar dados do Formulário">Limpar</button> 
 
 
         </form>
+        </form>
+
     </section>
     </main>
    
